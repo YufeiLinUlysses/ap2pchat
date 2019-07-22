@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background:white;
+}
+
+main {
+    flex: 1 0 auto;
+    color:blue;
+}
+
+    /* #nav-wrapper{
+        width: 800px;
+        height: 600px;
+        margin: 50px auto; /* outer margin design: top/bottom left/right
+        color:red;
+    } */
+
+    #chat-messages {
+        min-height: 10vh;
+        height: 60vh;
+        width: 100%;
+        overflow-y: scroll;
+        background:	rgb(255, 255, 255);  
+        border: 4px solid rgb(255, 255, 255);
+    }
+
+    #pagetitle{
+        font-size: 300%
+    }
+</style>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.6/assets/css/emojione.min.css"/>
+    <link rel="shortcut icon" href="images/cclogo.png">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+            <a href="#" ><img src="images/cclogo.png" class="navbar100-form-avatar"></a>
+            <a id="pagetitle">Chain Chat</a>
+        </nav>
+</header>
+<main id="chat">
+    <div class="row">
+        <div class="col s12">
+            <div class="card horizontal">
+                <div id="chat-messages" class="card-content" v-html="chatContent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" v-if="joined">
+        <div class="input-field col s8">
+            <input type="text" v-model="newMsg" @keyup.enter="send">
+        </div>
+        <div class="input-field col s4">
+            <button class="waves-effect waves-light btn" @click="send">
+                <i class="material-icons right">chat</i>
+                Send
+            </button>
+        </div>
+    </div>
+</main>
+<script src="https://unpkg.com/vue@2.1.3/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/emojione/2.2.6/lib/js/emojione.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="./js/chat.js"></script>
+</body>
+</html>
