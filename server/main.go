@@ -19,8 +19,8 @@ var upgrader = websocket.Upgrader{
 
 // Message defines our message object
 type Message struct {
-	Email    string `json:"email"`
-	Username string `json:"username"`
+	Sender   string `json:"sender"`
+	Time     string `json:"time"`
 	Message  string `json:"message"`
 }
 
@@ -35,8 +35,8 @@ func main() {
 	go handleMessages()
 
 	// Start the server on localhost port 8000 and log any errors
-	log.Println("http server started on :8000")
-	err := http.ListenAndServe(":8000", nil)
+	log.Println("http server started on :7000")
+	err := http.ListenAndServe(":7000", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}

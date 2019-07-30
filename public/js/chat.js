@@ -20,7 +20,7 @@ if (!location.hash) {
 const chatHash = location.hash.substring(1);
 
 //Open a websocket chatting
-var ws = new WebSocket("ws://localhost:7000/ws")
+var ws = new WebSocket("ws://47.92.244.235:7000/ws")
 
 // ws.onopen = function (evt) {
 //    
@@ -42,7 +42,7 @@ function updateBoard(data){
     var fixedMsg = wbr(msg.message,10)
     var tpl = document.getElementById("chatbubble")
     var clon = tpl.content.cloneNode(true)
-    var title = emoji + msg.sender
+    var title = msg.sender
     var msgFrame = clon.getElementById("msgframe")
     var sender = clon.getElementById("sender")
     var msgbubble = clon.getElementById("msgbubble")
