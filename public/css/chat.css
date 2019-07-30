@@ -1,0 +1,184 @@
+    .message {
+      display: flex;
+      flex-direction: column;
+    }
+    .message--mine {
+      align-items: flex-end;
+    }
+    .message--theirs {
+      align-items: flex-start;
+    }
+    .message__name {
+      padding: 10px 0;
+    }
+    .message__bubble {
+      width: 60%;
+      padding: 20px;
+      border-radius: 3px;
+    }
+    .message--theirs .message__bubble {
+      
+      width: auto;
+      background: #003377;
+      color: white;
+    }
+    .message--mine .message__bubble {
+      width: auto;
+      background: rgba(156, 172, 172, 0.2);
+    }
+    .content {
+      float: left;
+      border: 1px solid #999;
+      /* border:black 0px 2px 2px, black 0px 4px 4px, black 0px 8px 8px, black 0px 16px 16px, black 0px 32px 32px, black 0px 64px 64px;  */
+      /* box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px; */
+      border-radius: 3px;
+      height: 100vh;
+      max-height: 600px;
+      width: 100vw;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+    .friendlist {
+      float: left;
+      /* change color */
+      background: #005bea;
+      background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+      background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+      background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+      background: linear-gradient(bottom, #005bea, #00c6fb);
+      /* box-shadow: rgba(0, 255, 255, 0.2) 0px 2px 2px, rgba(0, 255, 255, 0.2) 0px 4px 4px, rgba(0, 255, 255, 0.2) 0px 8px 8px, rgba(0, 255, 255, 0.2) 0px 16px 16px, rgba(0, 255, 255, 0.2) 0px 32px 32px, rgba(0, 255, 255, 0.2) 0px 64px 64px; */
+      border-radius: 5px;
+      height: 100vh;
+      max-height: 600px;
+      width: 50vw;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+    .messages {
+      flex-grow: 1;
+      padding: 20px 30px;
+      overflow: auto;
+    }
+    .footer {
+      line-height: 76px;
+      border-top: 1px solid #666666;
+      display: flex;
+      flex-shrink: 0;
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      height: 76px;
+      border: none;
+      flex-grow: 1;
+      padding: 0 30px;
+      font-size: 16px;
+      background: transparent;
+    }
+    button {
+      border: none;
+      background: transparent;
+      padding: 0 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      height: 100vh;
+    }
+/*HTML*/
+#personal_profile{
+            max-width: 100%;
+            border: 1px solid #666666;
+            padding: 20px;
+            height:60px;
+        }
+        #personal_profile .wrap{
+            height: 50px;
+        }
+        #personal_profile .wrap img{
+            width:40px;
+            border-radius: 50%;
+            padding: 3px;
+            float:left;
+            height:auto;
+            border: 2px solid #666666;
+            margin: 1px 1px;
+        }
+        #search .fa fa-search{
+            margin: 5px 5px;
+        }
+        .con .wrap img{
+            width:30%;
+            border-radius: 50%;
+            padding: 3px;
+            float:left;
+            height:auto;
+            border: 2px solid #666666;
+            /* margin: 1px 1px; */
+        }
+        .con .wrap .name{
+            color:rgba(0, 0, 0, 0.479);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .user{
+          color:rgba(0, 0, 0, 0.479);
+          font-size: 35px;
+        }
+        .messageNow{
+          font-size: 25px;
+          font-weight: 600;
+        }
+        .searchBar {
+            font-size: 20px;
+            width: 100%;
+            color: #00eeff;
+            background: #005aea00;
+            background: -webkit-linear-gradient(bottom, #005aeac5, #00c5fb85);
+            background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+            background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+            background: linear-gradient(bottom, #005bea, #00c6fb);
+            height: 24px;
+            padding: 0 0 0 52px;
+        }
+
+        .searchBar::placeholder {
+          color: rgb(0, 238, 255);
+          opacity: 1; /* Firefox */
+        }
+
+        .searchBarInput {
+          font-size: 15px;
+          color: #00eeff;
+
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          align-items: center;
+          position: absolute;
+          border-radius: 25px;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding-left: 30px;
+          pointer-events: none;
+
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+        }
+  

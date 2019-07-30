@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
-  <div class="content">
-    <div class="messages">
+    <!-- Friend List Bar -->
+    <div class="friendlist">
+        <div class="contact con con p-t-20 p-b-12">
+            <div class="wrap">
+                <img id="list-img" src="images/profile_img.png" class="online" alt="" />
+                <p class="user">USER</p>
+            </div>
+        </div>
 
+        <form class="con wrap-input100 validate-input">
+            <span class="searchBarInput">
+                <i class="fa fa-search"></i>
+            </span>
+            <input class="searchBar" type="text" placeholder="Search...">
+        </form>
+        <div class="p-b-10"></div>
+        <!-- Need to change to template -->
+        <div class="contact con con p-b-12">
+                <div class="wrap">
+                    <img id="list-img" src="images/pikachu.png" class="online" alt="" /> 
+                    <p class="name">Doris</p>
+                </div>
+        </div>
+        <div class="contact con p-b-12">
+                <div class="wrap ">
+                    <img id="list-img" src="images/pikachu.png" class="online" alt="" /> 
+                    <p class="name">Miranda</p>
+                </div>
+        </div>
     </div>
-    <form class="footer" onsubmit="return false;">
-      <input type="text" placeholder="Your message..">
-      <button type="submit">Send</button>
-    </form>
-  </div>
-
-  <template data-template="message">
-    <div class="message">
-      <div class="message__name"></div>
-      <div class="message__bubble"></div>
+    
+    <!-- Chat Part -->
+    <div class="content">
+        <div id="board" class="messages">
+            <p class="messageNow">ASTRI</p>
+        </div>
+        
+        <form class="footer">
+            <input id="messageinput" type="text" placeholder="Your message..">
+            <button type="button" onclick="onSendClick()">Send</button>
+        </form>
     </div>
-  </template>
 
-  <script src="js/chat.js"></script>
-
+    <template id="chatbubble" data-template="message">
+        <div id="msgframe" class="message">
+            <div id="sender" class="message__name"></div>
+            <div id="msgbubble" class="message__bubble"></div>
+        </div>
+    </template>
+    
+    <script src="js/chat.js"></script>
+    
 </body>
+
 </html>

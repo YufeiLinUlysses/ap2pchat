@@ -45,8 +45,10 @@
                 document.location.href = nextUrl
             }
             else if (signIn["SuccStatus"] == 2){
-                $("#title").text("You have already signed in").css("color", "red")
-                return false
+                window.sessionStorage.setItem("email", String($email))
+                window.sessionStorage.setItem("username", String($email).split("@")[0])
+                var nextUrl = "chat.html"
+                document.location.href = nextUrl
             }
             else if (signIn["SuccStatus"]!=null){
                 $("#title").text("Please Check Your Email or Password").css("color","red")
