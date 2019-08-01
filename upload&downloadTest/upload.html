@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chain Chat</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div id="uploadForm">
+        <input id="file" type="file" />
+        <button id="upload" type="button">upload</button>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery/jquery.md5.js"></script>
+
+    <script>
+        //Returns the json in "done" function
+        //Upload the chosen file
+        $("#upload").click(function(){
+            var formData = new FormData();
+            formData.append('file', $('#file')[0].files[0]);
+            formData.append("token", "95e85f7c903a27abf9988f6f5c359918af3480977bec499147dccaa4dd723ba2")
+            $.ajax({
+                url: 'http://139.159.244.231:8080/file/upload',
+                type: 'POST',
+                cache: false,
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function (res) {
+                console.log(res)
+            }).fail(function (res) { });
+        })
+        
+    </script>
+</body>
+
+</html>

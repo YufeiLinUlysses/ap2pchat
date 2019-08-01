@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chain Chat</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div id="uploadForm">
+        <button id="download" type="button">download</button>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery/jquery.md5.js"></script>
+
+    <script>
+        //Input afid and token
+        //Returns the file
+        //Download file with given afid and token
+        $("#download").click(function () {
+            var afid = "1e0000000000057ec17a36263393bdfdbf84ef8739250c094660e805365a4ee94586cdb10899fb3b905dae96469ba32d052de73049a03aeea91130834705e5e8"
+            var token = "95e85f7c903a27abf9988f6f5c359918af3480977bec499147dccaa4dd723ba2"
+            var url = "http://139.159.244.231:8080/file/download?afid="+afid+"&token="+token
+            $.ajax({
+                url: url,
+                type: 'GET',
+                "async": true,
+                "crossDomain": true,
+            }).done(function (res) {
+                console.log(res)
+            }).fail(function (res) { });
+        })
+
+    </script>
+</body>
+
+</html>
