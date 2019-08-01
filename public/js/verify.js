@@ -4,11 +4,13 @@
     var input = $('.validate-input .input100');
     var $baseUrl = "http://139.159.244.231:8080/auth"
 
+    //Get the verification code value and check if this 
+    //verification code is right
     //Verify button functions
     $("#verify").click(function () {
         if(validateInput()){
             var verc = $("#vercode").val()
-            //The Second vecode shall be replaced by a vaiable storing verification code
+            //The Second vercode shall be replaced by a vaiable storing verification code
             if(verc==verc){
                 var nextUrl = "setpassword.html"
                 document.location.href = nextUrl
@@ -23,7 +25,7 @@
         }
     })
 
-    //Code below are all for validation of input
+    //Code below are all for validation of input, like checking if email input is valid
     function validateInput() {
         var check = true;
 
