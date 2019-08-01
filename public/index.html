@@ -1,3 +1,4 @@
+<!-- This page has some onload functions, based on current design, users go to login page immediately -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +30,8 @@
 		 <div class="container-login100" >
 			<div class="wrap-login100 p-t-120">
 				<form class="login100-form validate-form">
+
+					<!-- The logo in the center of the page -->
 					<div class="login100-form-avatar">
 						<img src="images/cclogo.png" alt="AVATAR">
 					</div>
@@ -37,6 +40,7 @@
 						Welcome to Chain Chat
 					</span>
 
+					<!-- Email input field -->
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Please enter valid email">
 						<input class="input100" type="text" id="email" placeholder="Email">
 						<span class="focus-input100"></span>
@@ -45,6 +49,7 @@
 						</span>
 					</div>
 
+					<!-- Password input field -->
 					<div id="passdiv" class="wrap-input100 validate-input m-b-10" data-validate = "Password required">
 						<input class="input100" type="password" id="passwd" placeholder="Password">
 						<span class="focus-input100"></span>
@@ -53,15 +58,19 @@
 						</span>
 					</div>
 
+					<!-- Contains login and register button -->
 					<div class="container-login100-form-btn p-t-10">
+						<!-- Login button, has functiosn in login.js -->
 						<button type="button" id="login" class="login100-form-btn">
 							Login
 						</button>
+						<!-- Register button, goes to register page -->
 						<button type="button" id="register" class="login100-form-btn">
 							Register
 						</button>
 					</div>
 
+					<!-- Go to forget password page, but it's not linked yet -->
 					<div class="text-center w-full p-t-25 p-b-200">
 						<a href="#" class="txt1">
 							Forget Password?
@@ -71,9 +80,6 @@
 			</div>
 		</div>
 	</div>
-	
-	
-
 	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -86,6 +92,7 @@
 <!--===============================================================================================-->
 	<script src="js/login.js"></script>
 	<script>
+		//Onload function if this page loads after register process
 		$(document).ready(function () {
 			var fT = window.sessionStorage.getItem("firstTime")
 			if (fT == "True"){

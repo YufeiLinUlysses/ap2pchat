@@ -1,3 +1,4 @@
+<!-- Verify information page, contains onload functions -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,14 +30,18 @@
 		 <div class="container-login100" ><!--style="background-image: url('images/img-01.jpg');"--> 
 			<div class="wrap-login100 p-t-120">
 				<form class="login100-form validate-form">
+
+					<!-- Logo in the center of the page -->
 					<div class="login100-form-avatar">
 						<img src="images/cclogo.png" alt="AVATAR">
 					</div>
 
+					<!-- Page title -->
 					<span class="login100-form-title p-t-5 p-b-20">
 						Verify Your Email
 					</span>
 
+					<!-- Email input field -->
 					<div class="wrap-input100 validate-input m-b-10">
 						<input class="input100" type="text" id="email" name="email" disabled>
 						<span class="focus-input100"></span>
@@ -45,6 +50,7 @@
 						</span>
 					</div>
 
+					<!-- Verification input field -->
 					<div id="vcdiv" class="wrap-input100 validate-input m-b-10" data-validate = "Verification code required">
 						<input class="input100" type="password" id="vercode" placeholder="Verification Code" disabled>
 						<span class="focus-input100"></span>
@@ -52,7 +58,8 @@
 							<i class="fa fa-lock"></i>
 						</span>
                     </div>
-                
+				
+					<!-- Verifies the verification code -->
 					<div class="container-login100-form-btn p-t-10 p-b-200">
 						<button type="button" id="verify" class="login200-form-btn">
 							Verify
