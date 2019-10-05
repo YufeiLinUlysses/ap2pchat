@@ -2,7 +2,7 @@
     "use strict";
 
     var input = $('.validate-input .input100');
-    var $baseUrl = "http://139.159.244.231:8080/auth"
+    var $baseUrl = "myBaseUrl/auth"
 
     //Get the verification code value and check if this 
     //verification code is right
