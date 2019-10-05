@@ -3,7 +3,7 @@
     "use strict";
 
     var input = $('.validate-input .input100');
-    var $baseUrl = "http://139.159.244.231:8080/auth"
+    var $baseUrl = "myBaseUrl/auth"
 
     //Next button functions
     $("#set").click(function () {
